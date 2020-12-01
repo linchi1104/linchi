@@ -1,0 +1,45 @@
+<html>
+<head></head>
+<body>
+<script>
+var year;
+var month;
+var day;
+var pass;
+
+year=window.prompt("請輸入出生年份");
+month=window.prompt("請輸入出生月份");
+day=window.prompt("請輸入出生日");
+year=parseInt(year);
+month=parseInt(month);
+day=parseInt(day);
+if(year%9==0){
+  year=9;
+}
+else{
+  year=year%9;
+}
+
+if(month%9==0){
+  month=9;
+}
+else{
+  month=month%9;
+}
+
+if(day%9==0){
+  day=9;
+}
+else{
+  day=day%9;
+}
+pass=year+month+day;
+if(pass%9==0){
+alert('生日密碼為9');
+}
+else{
+alert('生日密碼為'+pass%9);
+}
+</script>
+</body>
+</html>
